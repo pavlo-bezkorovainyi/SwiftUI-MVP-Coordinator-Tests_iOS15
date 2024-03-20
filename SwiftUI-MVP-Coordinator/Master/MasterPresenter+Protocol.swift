@@ -7,29 +7,33 @@
 
 import SwiftUI
 
-protocol MasterPresenting: ObservableObject { // Notice conformance to ObservableObject
-  associatedtype V1: View
-  associatedtype V2: View
-  var viewModel: MasterViewModel { get }
-  func onButtonPressed1(isPresented: Binding<Bool>) -> V1
-  func onButtonPressed2(isPresented: Binding<Bool>) -> V2
+class Presenter<C: Coordinator> {
+    private(set) weak var coordinator: C?
+    
+    init(coordinator: C) {
+        self.coordinator = coordinator
+    }
+    
+    deinit {
+        coordinator?.stop()
+    }
 }
 
-final class MasterPresenter<C: MasterCoordinator>: MasterPresenting {
-  @Published private(set) var viewModel: MasterViewModel
-  
-  private let coordinator: MasterCoordinator
-  
-  init(coordinator: MasterCoordinator) {
-    self.coordinator = coordinator
-    self.viewModel = MasterViewModel(date: Date())
-  }
-  
-  func onButtonPressed1(isPresented: Binding<Bool>) -> some View {
-    return coordinator.presentDetailView1(isPresented: isPresented)
-  }
-  
-  func onButtonPressed2(isPresented: Binding<Bool>) -> some View {
-    return coordinator.presentDetailView2(isPresented: isPresented)
-  }
+protocol MasterPresenting: ObservableObject {
+    associatedtype U: View
+    var viewModel: MasterViewModel { get }
+    func onButtonPressed(isPresented: Binding<Bool>) -> U
+}
+
+final class MasterPresenter<C: MasterCoordinator>: Presenter<C>, MasterPresenting {
+    @Published private(set) var viewModel: MasterViewModel
+    
+    override init(coordinator: C) {
+        self.viewModel = MasterViewModel(date: Date())
+        super.init(coordinator: coordinator)
+    }
+    
+    func onButtonPressed(isPresented: Binding<Bool>) -> some View {
+        return coordinator?.presentDetailView(isPresented: isPresented)
+    }
 }

@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-final class RootMasterCoordinator: MasterCoordinator {
-  private weak var window: UIWindow?
-  
-  init(window: UIWindow?) {
-    self.window = window
-  }
-  
-  func start() -> some View {
-    let view = MasterFactory.make(with: self)
-    let navigation = NavigationView { view }
-    let hosting = UIHostingController(rootView: navigation)
-    window?.rootViewController = hosting
-    window?.makeKeyAndVisible()
-    return EmptyView() // we just have to return something
-  }
+final class RootMasterCoordinator<P: Coordinator>: MasterCoordinator {
+    private weak var window: UIWindow?
+    
+    init(window: UIWindow?) {
+        self.window = window
+    }
+    
+    func start() -> some View {
+        let view = MasterFactory.make(with: self)
+        let navigation = NavigationView { view }
+        let hosting = UIHostingController(rootView: navigation)
+        window?.rootViewController = hosting
+        window?.makeKeyAndVisible()
+        return EmptyView()
+    }
 }
 

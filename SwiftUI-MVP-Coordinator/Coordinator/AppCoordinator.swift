@@ -8,15 +8,17 @@
 import SwiftUI
 
 final class AppCoordinator: Coordinator {
+  typealias P = AppCoordinator
+  
   private weak var window: UIWindow?
   
   init(window: UIWindow) {
     self.window = window
   }
   
-  @discardableResult // discardableResult let us avoid capturing whatever it returns
-     func start() -> some View {
-         let coordinator = RootMasterCoordinator(window: window)
-         return coordinate(to: coordinator)
-     }
+  @discardableResult
+  func start() -> some View {
+    let coordinator = RootMasterCoordinator<AppCoordinator>(window: window)
+    return coordinate(to: coordinator)
+  }
 }

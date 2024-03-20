@@ -9,15 +9,16 @@ import SwiftUI
 
 protocol DetailCoordinator: Coordinator {}
 
-final class NavigationDetailCoordinator: DetailCoordinator {
-  private var isPresented: Binding<Bool>
-  
-  init(isPresented: Binding<Bool>) {
-    self.isPresented = isPresented
-  }
-  
-  func start() -> some View {
-    return ModalLink(isPresented: isPresented, destination: view)
+final class NavigationDetailCoordinator<P: Coordinator>: DetailCoordinator {
+    private var isPresented: Binding<Bool>
+    
+    init(isPresented: Binding<Bool>) {
+        self.isPresented = isPresented
     }
-  }
+    
+    func start() -> some View {
+        return NavigationLink(destination: EmptyView(), isActive: isPresented) {
+            EmptyView()
+        }
+    }
 }

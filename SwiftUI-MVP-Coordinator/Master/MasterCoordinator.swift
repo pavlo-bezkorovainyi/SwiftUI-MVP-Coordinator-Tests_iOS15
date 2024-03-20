@@ -10,15 +10,8 @@ import SwiftUI
 protocol MasterCoordinator: Coordinator {} // empty for now
 
 extension MasterCoordinator {
-  func presentDetailView1(isPresented: Binding<Bool>) -> some View {
-      // here we decide here to which coordinator we'd like to navigate to
-      let coordinator = NavigationDetailCoordinator(isPresented: isPresented)
-      return coordinate(to: coordinator)
-  }
-
-  func presentDetailView2(isPresented: Binding<Bool>) -> some View {
-      // here we decide here to which coordinator we'd like to navigate to
-      let coordinator = AnotherNewCoordinator(isPresented: isPresented)
+  func presentDetailView(isPresented: Binding<Bool>) -> some View {
+      let coordinator = NavigationDetailCoordinator<Self>(isPresented: isPresented)
       return coordinate(to: coordinator)
   }
 }
