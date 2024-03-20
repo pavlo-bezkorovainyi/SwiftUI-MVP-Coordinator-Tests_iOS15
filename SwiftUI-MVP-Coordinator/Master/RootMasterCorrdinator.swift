@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-protocol MasterCoordinator: Coordinator {} // empty for now
-
 final class RootMasterCoordinator: MasterCoordinator {
   private weak var window: UIWindow?
   
@@ -16,11 +14,13 @@ final class RootMasterCoordinator: MasterCoordinator {
     self.window = window
   }
   
-  func start() {
+  func start() -> some View {
     let view = MasterFactory.make(with: self)
     let navigation = NavigationView { view }
     let hosting = UIHostingController(rootView: navigation)
     window?.rootViewController = hosting
     window?.makeKeyAndVisible()
+    return EmptyView() // we just have to return something
   }
 }
+

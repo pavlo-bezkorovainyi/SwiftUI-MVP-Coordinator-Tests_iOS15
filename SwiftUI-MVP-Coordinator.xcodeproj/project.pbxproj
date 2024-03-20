@@ -23,6 +23,9 @@
 		D0F9A89A2BAB1B9500E900C0 /* RootMasterCorrdinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8992BAB1B9500E900C0 /* RootMasterCorrdinator.swift */; };
 		D0F9A89C2BAB1BBB00E900C0 /* RootMasterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A89B2BAB1BBB00E900C0 /* RootMasterFactory.swift */; };
 		D0F9A89E2BAB3C6400E900C0 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A89D2BAB3C6400E900C0 /* NavigationButton.swift */; };
+		D0F9A8A02BAB3F8B00E900C0 /* MasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A89F2BAB3F8B00E900C0 /* MasterCoordinator.swift */; };
+		D0F9A8A22BAB3FD800E900C0 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8A12BAB3FD800E900C0 /* DetailCoordinator.swift */; };
+		D0F9A8A42BAB406000E900C0 /* ModalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8A32BAB406000E900C0 /* ModalLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		D0F9A8992BAB1B9500E900C0 /* RootMasterCorrdinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMasterCorrdinator.swift; sourceTree = "<group>"; };
 		D0F9A89B2BAB1BBB00E900C0 /* RootMasterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMasterFactory.swift; sourceTree = "<group>"; };
 		D0F9A89D2BAB3C6400E900C0 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		D0F9A89F2BAB3F8B00E900C0 /* MasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoordinator.swift; sourceTree = "<group>"; };
+		D0F9A8A12BAB3FD800E900C0 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		D0F9A8A32BAB406000E900C0 /* ModalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 				D03DC23D2BAB0FBA004B5899 /* Preview Content */,
 				D03DC2692BAB158A004B5899 /* SceneDelegate.swift */,
 				D03DC26B2BAB1593004B5899 /* AppDelegate.swift */,
+				D0F9A8A32BAB406000E900C0 /* ModalLink.swift */,
 				D0F9A89D2BAB3C6400E900C0 /* NavigationButton.swift */,
 			);
 			path = "SwiftUI-MVP-Coordinator";
@@ -157,6 +164,7 @@
 				D03DC2642BAB13CB004B5899 /* MasterPresenter+Protocol.swift */,
 				D0F9A8992BAB1B9500E900C0 /* RootMasterCorrdinator.swift */,
 				D0F9A89B2BAB1BBB00E900C0 /* RootMasterFactory.swift */,
+				D0F9A89F2BAB3F8B00E900C0 /* MasterCoordinator.swift */,
 			);
 			path = Master;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 			children = (
 				D03DC2672BAB14CF004B5899 /* Coordinator.swift */,
 				D03DC26D2BAB189E004B5899 /* AppCoordinator.swift */,
+				D0F9A8A12BAB3FD800E900C0 /* DetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -303,13 +312,16 @@
 				D03DC23A2BAB0FB9004B5899 /* MasterView.swift in Sources */,
 				D03DC2632BAB139C004B5899 /* MasterViewModel.swift in Sources */,
 				D0F9A89C2BAB1BBB00E900C0 /* RootMasterFactory.swift in Sources */,
+				D0F9A8A22BAB3FD800E900C0 /* DetailCoordinator.swift in Sources */,
 				D03DC2682BAB14CF004B5899 /* Coordinator.swift in Sources */,
 				D0F9A89A2BAB1B9500E900C0 /* RootMasterCorrdinator.swift in Sources */,
 				D03DC2652BAB13CB004B5899 /* MasterPresenter+Protocol.swift in Sources */,
+				D0F9A8A42BAB406000E900C0 /* ModalLink.swift in Sources */,
 				D03DC26E2BAB189E004B5899 /* AppCoordinator.swift in Sources */,
 				D0F9A89E2BAB3C6400E900C0 /* NavigationButton.swift in Sources */,
 				D03DC26C2BAB1593004B5899 /* AppDelegate.swift in Sources */,
 				D03DC2382BAB0FB9004B5899 /* SwiftUI_MVP_CoordinatorApp.swift in Sources */,
+				D0F9A8A02BAB3F8B00E900C0 /* MasterCoordinator.swift in Sources */,
 				D03DC26A2BAB158A004B5899 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

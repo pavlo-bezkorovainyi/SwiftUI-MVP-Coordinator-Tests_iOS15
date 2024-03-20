@@ -8,12 +8,12 @@
 import SwiftUI
 
 protocol Coordinator {
-  func start()
+  associatedtype U: View
+  func start() -> U
 }
 
 extension Coordinator {
-  func coordinate(to coordinator: Coordinator) {
-//    coordinator.parent = self
-    coordinator.start()
+  func coordinate<T: Coordinator>(to coordinator: T) -> some View {
+    return coordinator.start()
   }
 }

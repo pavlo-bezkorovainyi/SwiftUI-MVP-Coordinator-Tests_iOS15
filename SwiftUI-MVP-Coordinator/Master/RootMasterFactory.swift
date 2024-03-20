@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum MasterFactory {
-  static func make(with coordinator: MasterCoordinator) -> some View {
+  static func make<C: MasterCoordinator>(with coordinator: C) -> some View {
     let presenter = MasterPresenter(coordinator: coordinator)
     let view = MasterView(presenter: presenter)
     return view

@@ -14,8 +14,9 @@ final class AppCoordinator: Coordinator {
     self.window = window
   }
   
-  func start() {
-    let coordinator = RootMasterCoordinator(window: window)
-    coordinate(to: coordinator)
-  }
+  @discardableResult // discardableResult let us avoid capturing whatever it returns
+     func start() -> some View {
+         let coordinator = RootMasterCoordinator(window: window)
+         return coordinate(to: coordinator)
+     }
 }

@@ -15,18 +15,12 @@ struct MasterView<T: MasterPresenting>: View {
   @State private var isPresented = false
   
   var body: some View {
-    Button(action: {
-      self.isPresented = true
-    }) {
-      Text("\(presenter.viewModel.date, formatter: dateFormatter)")
-        .background(
-          // this is the cool part
-          NavigationLink(destination: EmptyView(), isActive: $isPresented) {
-            EmptyView()
-          }
-        )
-    }
-  }
+    NavigationButton(contentView: Text("\(presenter.viewModel.date, formatter: dateFormatter)") ,
+                     navigationView: { isPresented in
+                         NavigationLink(destination: EmptyView(), isActive: $isPresented) {
+                           self.presenter.onButtonPressed(isPresented: $isPresented)
+                         }
+    })  }
 }
 
 
