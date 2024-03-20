@@ -14,6 +14,15 @@
 		D03DC2492BAB0FBA004B5899 /* SwiftUI_MVP_CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DC2482BAB0FBA004B5899 /* SwiftUI_MVP_CoordinatorTests.swift */; };
 		D03DC2532BAB0FBA004B5899 /* SwiftUI_MVP_CoordinatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DC2522BAB0FBA004B5899 /* SwiftUI_MVP_CoordinatorUITests.swift */; };
 		D03DC2552BAB0FBA004B5899 /* SwiftUI_MVP_CoordinatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DC2542BAB0FBA004B5899 /* SwiftUI_MVP_CoordinatorUITestsLaunchTests.swift */; };
+		D03DC2632BAB139C004B5899 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DC2622BAB139C004B5899 /* MasterViewModel.swift */; };
+		D03DC2652BAB13CB004B5899 /* MasterPresenter+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DC2642BAB13CB004B5899 /* MasterPresenter+Protocol.swift */; };
+		D03DC2682BAB14CF004B5899 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DC2672BAB14CF004B5899 /* Coordinator.swift */; };
+		D03DC26A2BAB158A004B5899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DC2692BAB158A004B5899 /* SceneDelegate.swift */; };
+		D03DC26C2BAB1593004B5899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DC26B2BAB1593004B5899 /* AppDelegate.swift */; };
+		D03DC26E2BAB189E004B5899 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DC26D2BAB189E004B5899 /* AppCoordinator.swift */; };
+		D0F9A89A2BAB1B9500E900C0 /* RootMasterCorrdinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8992BAB1B9500E900C0 /* RootMasterCorrdinator.swift */; };
+		D0F9A89C2BAB1BBB00E900C0 /* RootMasterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A89B2BAB1BBB00E900C0 /* RootMasterFactory.swift */; };
+		D0F9A89E2BAB3C6400E900C0 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A89D2BAB3C6400E900C0 /* NavigationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 		D03DC24E2BAB0FBA004B5899 /* SwiftUI-MVP-CoordinatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-MVP-CoordinatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03DC2522BAB0FBA004B5899 /* SwiftUI_MVP_CoordinatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVP_CoordinatorUITests.swift; sourceTree = "<group>"; };
 		D03DC2542BAB0FBA004B5899 /* SwiftUI_MVP_CoordinatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVP_CoordinatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D03DC2622BAB139C004B5899 /* MasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
+		D03DC2642BAB13CB004B5899 /* MasterPresenter+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasterPresenter+Protocol.swift"; sourceTree = "<group>"; };
+		D03DC2672BAB14CF004B5899 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D03DC2692BAB158A004B5899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D03DC26B2BAB1593004B5899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D03DC26D2BAB189E004B5899 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D0F9A8992BAB1B9500E900C0 /* RootMasterCorrdinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMasterCorrdinator.swift; sourceTree = "<group>"; };
+		D0F9A89B2BAB1BBB00E900C0 /* RootMasterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMasterFactory.swift; sourceTree = "<group>"; };
+		D0F9A89D2BAB3C6400E900C0 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +112,14 @@
 		D03DC2362BAB0FB9004B5899 /* SwiftUI-MVP-Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				D03DC2612BAB11A1004B5899 /* Master */,
 				D03DC2372BAB0FB9004B5899 /* SwiftUI_MVP_CoordinatorApp.swift */,
-				D03DC2392BAB0FB9004B5899 /* MasterView.swift */,
+				D03DC2612BAB11A1004B5899 /* Master */,
+				D03DC2662BAB14B1004B5899 /* Coordinator */,
 				D03DC23B2BAB0FBA004B5899 /* Assets.xcassets */,
 				D03DC23D2BAB0FBA004B5899 /* Preview Content */,
+				D03DC2692BAB158A004B5899 /* SceneDelegate.swift */,
+				D03DC26B2BAB1593004B5899 /* AppDelegate.swift */,
+				D0F9A89D2BAB3C6400E900C0 /* NavigationButton.swift */,
 			);
 			path = "SwiftUI-MVP-Coordinator";
 			sourceTree = "<group>";
@@ -131,8 +152,22 @@
 		D03DC2612BAB11A1004B5899 /* Master */ = {
 			isa = PBXGroup;
 			children = (
+				D03DC2392BAB0FB9004B5899 /* MasterView.swift */,
+				D03DC2622BAB139C004B5899 /* MasterViewModel.swift */,
+				D03DC2642BAB13CB004B5899 /* MasterPresenter+Protocol.swift */,
+				D0F9A8992BAB1B9500E900C0 /* RootMasterCorrdinator.swift */,
+				D0F9A89B2BAB1BBB00E900C0 /* RootMasterFactory.swift */,
 			);
 			path = Master;
+			sourceTree = "<group>";
+		};
+		D03DC2662BAB14B1004B5899 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D03DC2672BAB14CF004B5899 /* Coordinator.swift */,
+				D03DC26D2BAB189E004B5899 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +301,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03DC23A2BAB0FB9004B5899 /* MasterView.swift in Sources */,
+				D03DC2632BAB139C004B5899 /* MasterViewModel.swift in Sources */,
+				D0F9A89C2BAB1BBB00E900C0 /* RootMasterFactory.swift in Sources */,
+				D03DC2682BAB14CF004B5899 /* Coordinator.swift in Sources */,
+				D0F9A89A2BAB1B9500E900C0 /* RootMasterCorrdinator.swift in Sources */,
+				D03DC2652BAB13CB004B5899 /* MasterPresenter+Protocol.swift in Sources */,
+				D03DC26E2BAB189E004B5899 /* AppCoordinator.swift in Sources */,
+				D0F9A89E2BAB3C6400E900C0 /* NavigationButton.swift in Sources */,
+				D03DC26C2BAB1593004B5899 /* AppDelegate.swift in Sources */,
 				D03DC2382BAB0FB9004B5899 /* SwiftUI_MVP_CoordinatorApp.swift in Sources */,
+				D03DC26A2BAB158A004B5899 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
